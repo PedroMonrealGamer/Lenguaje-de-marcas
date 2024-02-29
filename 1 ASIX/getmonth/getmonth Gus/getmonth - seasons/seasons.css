@@ -1,0 +1,23 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    margin:0;
+    background-size: cover;
+}
+h1{
+    background-color: black;
+    color:white;
+    font-size: 3vw;
+    text-align: center;
+    margin:0;
+}
+h2{
+    font-size:3vw;
+    text-align: center;
+    background-color: black;
+    color:white;
+    width:60%;
+    margin: auto;
+    margin-top: 1vw;
+}

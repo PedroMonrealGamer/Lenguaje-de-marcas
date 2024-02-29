@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-size:medium;
+    font-family: Verdana;
+    text-decoration:none;
+    color:black;
+}
+#Barra{
+border-color: black;
+border-style: solid;
+background-color: lightblue ;
+display:block;
+width: 100%;
+position: fixed;
+}
+
+
+li{
+    list-style-type: none;
+    display:inline-block; 
+    padding:0.05em;
+    text-align:center;
+    /* border-style:solid; */
+
+    
+    
+
+}
+
+li:hover{
+    background-color: rgba(90, 50, 235, 0.562);
+
+}
+#li1{
+    border-right:2px solid black;  
+}
+#li2{
+    border-left:2px solid black;
+    float:right;
+
+}
+
+li:last-child{
+border-right: none;
+
+}

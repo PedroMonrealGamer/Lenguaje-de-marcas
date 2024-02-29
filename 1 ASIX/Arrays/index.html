@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h2>Arrays con JavaScript</h2>
+<p>Declarar array</p>
+<p>var numero = [
+    '1',
+    '2',
+    '3',
+    '4'
+    ];</p>
+  **************************************************************
+<p>Array en notación JSON</p>
+<p>{
+    "array": ["Hidrogeno", "Oxigeno", "Boro", "Sodio"]}</p>
+
+**************************************************************
+<p>Acceso a diferentes posiciones de una array</p>
+<p>var numero = [
+    '1',
+    '2',
+    '3',
+    '4'
+    ];</p>
+<p>Mi array de números</p>
+<p id="arrayp0">Posicion0</p>
+<p id="arrayp1">Posicion1</p>
+<p id="arrayp2">Posicion2</p>
+<p id="arrayp3">Posicion3</p>
+<button type="button" onclick=array1()>Establecer valores</button><br><br>
+<br>
+**************************************************************
+<p>Consultar longitud array</p>
+<p id="longitud"></p>
+<button type="button" onclick=consultar()>Consultar</button><br><br>
+<br>
+**************************************************************
+<p>Colocarse en el primer y último elemento</p>
+<p>primer elemento</p>
+<p id="primerelemento"></p>
+<p>Último elemento</p>
+<p id="ultimoelemento"></p>
+<button type="button" onclick=extremos()>Visualizar</button><br><br>
+<br>
+**************************************************************
+<p>Recorrer un array y pegarlo en un elemento HTML</p>
+<p>Array</p>
+<p id="valores"></p>
+<button type="button" onclick=recorrer()>Visualizar</button><br><br>
+<br>
+**************************************************************
+<p>array.forEach</p>
+<p id="res"></p>
+<button type="button" onclick=foreach()>Mostrar</button><br><br>
+<br>
+**************************************************************
+<p>Recorrer un array y generar elementos HTML</p>
+<p id="recorrergenerar"></p>
+<div id="div1"></div>
+<button type="button" onclick=recorrergenerar()>Mostrar</button><br><br>
+<br>
+**************************************************************
+<p>createElement</p>
+<p2>var text = document.createElement("p");</p>
+
+<br>
+**************************************************************
+<p>createTextNode</p>
+<p2>var NododeTexto = document.createTextNode("Nodo de texto")</p2>
+<br><br>
+
+**************************************************************
+<p>AppendChild</p>
+<div id="div3"></div>
+<br>
+<button type="button" onclick=append()>Crear botón</button><br><br>
+<br>
+
+
+</body>
+<script src="index.js"></script>
+</html>

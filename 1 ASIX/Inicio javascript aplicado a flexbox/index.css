@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border: 3px solid #423E3B;
+    border-radius: 20px;
+    border-style:dashed;
+    background-color: rgb(255, 130, 130);
+    width: 100%;
+    top:0%
+}
+
+.caja{
+    display: flex;
+}
+.contenedor{
+    display:inline-flex; /* ESTO SIEMPRE PARA USAR FLEXBOX */
+    background-color: rgb(206, 155, 108);
+    align-items: stretch;
+    flex:1;
+    height: 200px;
+
+
+    
+}
+
+.contenedor > div {/*El símbolo > quiere decir los divs que haya dentro de la clase contenedor*/
+    background-color: #748E54;
+    margin:10px;
+    text-align: center;
+    line-height: 75px;
+    /*width: 200px;*/ /*Sólo ponedlo para el shrink*/
+    font-size 30px;
+    color:white;
+    border:5px dashed rgb(9, 255, 1);
+    border-radius: 5px;
+    
+    }
+
+div.pulsadores{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(206, 155, 108);
+    border-radius: 5px;
+    border-style: double;
+    bottom: 0;
+    width: auto;
+}
+
+.pulsador{
+    background-color:#BFCC94;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 20px;
+    color:black;
+    border: 5px double rgb(255, 0, 0);
+    border-radius: 4px;
+    width: 200px;
+
+}

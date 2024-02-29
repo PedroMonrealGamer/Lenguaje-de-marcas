@@ -1,0 +1,82 @@
+*{
+    font-size:1.5vw;
+    box-sizing:border-box;
+    font-family:monospace;
+}
+
+body{
+    margin:0;
+    background-color: crimson;
+}
+
+h3{
+    font-size: 2vw;
+    color:white;
+    margin:auto;
+    margin-top: 4vw;
+    text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+}
+
+.navbar a{
+    float: left;
+    color:crimson;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 2px solid crimson;
+}
+
+.desplegable{
+    float: left;
+    overflow: hidden;
+    color:crimson;
+    background-color: white;
+}
+
+.trigger{
+    border:none;
+    border-right: 2PX SOLID crimson;
+    outline: none;
+    background-color: white;
+    color:rgb(206,67,95);
+    font-size:1.5vw;
+    padding: 14px 16px;
+}
+
+.contenido {
+    display: none;
+    position: absolute;
+    background-color: rgb(207, 115, 134);
+    z-index: 1;
+}
+
+.navbar a:hover, .desplegable:hover{
+
+background-color: rgb(206,67,95);
+color:white;
+}
+
+.contenido a {
+float: none;
+color:white;
+padding: 14px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+border-bottom: 2px solid white;
+border-left: 2px solid white;
+border-right: 2px solid white;
+}
+
+.contenido a:hover{
+    background-color: rgb(206,67,95);
+}
+
+.desplegable:hover .contenido{
+    display: block;
+}

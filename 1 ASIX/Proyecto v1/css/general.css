@@ -1,0 +1,90 @@
+body {
+    background-image: linear-gradient(lightblue, rgb(50, 50, 255));   
+    padding: 0;
+    margin: 0;
+    font-family: helvetica;
+}
+
+@font-face {
+    font-family: 'tesla';
+    src: url('../Otros/tesla.ttf') format('truetype');
+}
+
+ul {
+    display:block;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.barra{
+    border-style: solid;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color:rgb(233, 233, 233);
+}
+
+ul li{
+    display: inline-block;
+}
+ul li a{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    font-family: helvetica;
+    color: rgb(4, 0, 255);
+    text-decoration: none;
+    margin: 0.2em;
+    padding:10px;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 10px;
+}
+
+ul li a:hover{
+    background-color: rgb(163, 187, 223);
+}
+
+/* TESLA DROPDOWN */
+ul li ul.TeslaDropdown{
+    display: none;
+    z-index: 1;
+    width: auto;
+    font-size: 0.9em;
+    margin-top:4.20em;
+}
+
+ul li:hover ul.TeslaDropdown{
+    display: block;
+}
+
+ul li ul.TeslaDropdown li{
+    display: block;
+}
+
+/* SPACEX DROPDOWN */
+
+ul li ul.SpacexDropdown{
+    display: none;
+    z-index: 1;
+    width: auto;
+    font-size: 0.9em;
+    margin-top:4.20em;
+}
+
+ul li:hover ul.SpacexDropdown{
+    display: block;
+}
+
+ul li ul.SpacexDropdown li{
+    display: block;
+}
+
+

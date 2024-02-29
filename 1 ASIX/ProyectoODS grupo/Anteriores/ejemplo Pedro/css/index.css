@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'halimun';
+    src: url('/extra/Halimun.ttf');
+  }
+  
+  @font-face {
+    font-family: 'garet';
+    src: url('/extra/Garet-Book.ttf');
+  }
+
+
+body{
+    background-color: #d2f1d6;
+    margin:0;
+    overflow: hidden;
+
+}
+
+*{
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    text-align: center;
+}
+
+header div{
+    border-bottom: solid;
+    background-color: #688762;
+    margin: 0;
+    padding: 0;
+    top:0;
+    
+
+}
+
+header div h1{
+    font-family: helvetica;
+    color:#7ca038;
+    font-size: 20px; 
+    text-align: left; 
+}
+
+header h1{font-family: helvetica;
+    color:#7ca038;
+    font-size: 50px;
+}
+
+header h2{
+    font-family: garet;
+    color:#55524e;
+    font-size: 20px;
+}
+main{
+    font-family: montserrat;
+    font-size: 15px ;
+
+}
+
+main h2.descripcion{
+    text-align: justify;
+    margin: 20px;
+}
+
+main h2.objetivos{
+    margin-top: 40px;
+    text-align: center;
+
+}
+
+main li{
+    margin-top: 20px;
+    text-align: center;
+    list-style:inside;
+
+}
+main button{
+    background-color:#688762;
+    color:#e8cbb6;
+    font-size: 40px;
+    font-family: rhyme;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    display: block;
+    margin:40px auto 0px auto
+
+}
+
+
+
+@media screen and (max-width:400px) {
+
+    header img.logo_principal{
+        display: inline;
+    }
+    header img.logo_secundario{
+        display: none;
+    }
+    }

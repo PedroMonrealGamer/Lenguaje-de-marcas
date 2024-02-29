@@ -1,0 +1,9 @@
+Manjeador de eventos(addEventListener)
+
+Importante poner el script debajo de los elementos que controla
+<script src="flexbox items.js"></script>
+
+
+console.log('reordeno');
+Para mostrar un mensaje por la consola
+

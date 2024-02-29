@@ -1,0 +1,37 @@
+// Variable que guarda el índice de la foto actual
+let fotosindice = 1;
+enseñarfotos(fotosindice);
+
+// Función para mostrar la siguiente foto
+function siguientefoto(n) {
+  enseñarfotos(fotosindice += n);
+}
+
+// Función para mostrar una foto específica
+function fotoactual(n) {
+  enseñarfotos(fotosindice = n);
+}
+
+// Función para mostrar la foto en la posición especificada
+function enseñarfotos(n) {
+
+  let i;
+  let fotos = document.getElementsByClassName("fotos");
+  let puntos = document.getElementsByClassName("puntos");
+
+  if (n > fotos.length) {fotosindice = 1}
+
+  if (n < 1) {fotosindice = fotos.length}
+
+  for (i = 0; i < fotos.length; i++) {
+    fotos[i].style.display = "none";
+  }
+  fotos[fotosindice-1].style.display = "block";
+
+    // quitar la clase 'activo' 
+  for (i = 0; i < puntos.length; i++) {
+    puntos[i].className = puntos[i].className.replace(" activo", "");
+  }
+
+  puntos[fotosindice-1].className += " activo";
+}

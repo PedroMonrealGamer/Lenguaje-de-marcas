@@ -1,0 +1,41 @@
+body{
+    background-color: #C0C5C1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+ul{
+    margin-top:0;
+    padding: 0;
+    background-color: #EAF0CE;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+display: block;
+padding: 15px 25px;
+color: white
+text-decoration: none;
+}
+
+ul li a:hover{
+background-color: #d3e095;
+}
+
+ul li ul.desplegable {
+    background-color: #7D8491;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+ul li:hover ul.desplegable{
+    display:block;
+}
+
+ul li ul.desplegable li{
+    display: block;
+}

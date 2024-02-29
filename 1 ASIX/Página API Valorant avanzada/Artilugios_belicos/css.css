@@ -1,0 +1,146 @@
+*{
+    transition: 0.5s;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(31, 31, 31);
+    background-image: url('fondo.png');
+    background-size:auto;
+    background-position: center;
+    color:white;
+
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    background-color: rgba(172, 91, 91, 0.466);
+    height: 40px;
+    text-align: center;
+    box-shadow: 0 0 15px red;
+
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-family:system-ui;
+    transition: 0.3s;
+
+
+}
+
+nav a:hover{
+    color: #ffc8c8;
+}
+
+nav a:last-child {
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+h1{
+    font-size: 60px;
+    font-family: Valorant;
+    text-align: center;
+    text-shadow: 0 0 15px red;
+}
+
+h2{
+    font-size: 30px;
+    font-family: Valorant;
+    text-align: center;
+}
+
+
+.divcategoria{
+scale: 0.8;
+
+
+}
+.divcajacateogoria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.nombreCategoria{
+    margin-bottom: 10px;
+    font-size: 50px;
+
+}
+.nombreArma{
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+.divArma{
+    border-style: solid;
+    border-color:white;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(39, 39, 39, 0.548);
+    margin: 50px;
+    box-shadow: 0 0 40px red;
+}
+
+.divArma:hover{
+    box-shadow: 0 0 40px rgb(255, 153, 0);
+}
+
+.divfotoarma{
+    height: 200px;
+    overflow: hidden;
+}
+
+.fotoArma{
+    object-fit:contain;
+}
+
+
+
+.datosArma{
+
+
+}
+
+
+
+.precioArma{
+    font-size: 25px;
+}
+
+
+.botonesArmaDIV{
+
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.11);
+
+}
+
+.botonesArma{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    font-size: 30px;
+    border-style: none;
+    background-color: rgba(255, 255, 255, 0.411);
+    font-family:Valorant;
+    color:white;
+
+    
+
+}
+
+.botonesArma:hover{
+    color:red;
+
+}

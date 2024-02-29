@@ -1,0 +1,4 @@
+1.-Tema
+2.-Móvil(Diseño, claridad, distribución)
+3.-Breakpoint pantalla horizontal
+4.-Home + 2 páginas secundarias

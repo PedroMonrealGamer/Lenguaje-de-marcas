@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Flex is a shorthand for grow, shrink and basis "flex:0 0 200px"</h1>
+    <div class="caja">
+    <div class="pulsadores">
+        <div class="pulsador" id="text">Change font size</div>
+        <div class="pulsador" id="color">Change color</div>
+        <div class="pulsador" id="tcolor">Change text color and size</div>
+        <div class="pulsador" id="flexorder">Change DIVs order</div>
+        <div class="pulsador" id="flexgrow">DIV 3 flex-grow to 8</div>
+        <div class="pulsador" id="flexshrink">DIV 2 will not shrink</div>
+        <div class="pulsador" id="alignself">5th DIV, overrides align-items in container</div>
+
+    </div>
+    <div id="container" class="contenedor">
+        <div id="1" style="flex-grow: 1">A</div>
+        <div id="2" style="flex-grow: 1">B</div>
+        <div id="3" style="flex-grow: 1">C</div>
+        <div id="4" style="flex-grow: 1">D</div>
+        <div id="5" style="flex-grow: 1">E</div>
+        <div id="6" style="flex-grow: 1">F</div>
+        <div id="7" style="flex-grow: 1">G</div>
+        <div id="8" style="flex-grow: 1">H</div>
+        <div id="9" style="flex-grow: 1">I</div>
+    </div>
+</div>
+<script src="items.js"></script>
+</body>
+</html>

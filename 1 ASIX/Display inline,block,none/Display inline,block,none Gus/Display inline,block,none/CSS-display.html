@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<script>
+  function oculta(){
+    document.getElementById("oculta").style.display='none';
+  }
+  function muestra(){
+    document.getElementById("oculta").style.display='block';
+  }
+  function liinline(){
+    var i,elementos;
+    elementos=document.getElementsByClassName("lista");
+    for(i=0 ; i<elementos.length ; i++){
+      elementos[i].style.display ='inline';
+    }
+  }
+  function liblock(){
+    var i,elementos;
+    elementos=document.getElementsByClassName("lista");
+    for(i=0 ; i<elementos.length ; i++){
+      elementos[i].style.display ='block';
+    }
+  }
+  function enlaceablock(){
+    document.getElementById("blocklink").style.display='block';
+  }
+  function hidevisi(){
+    document.getElementById("visi").style.visibility='hidden';
+  }
+  function disnone(){
+    document.getElementById("dispnone").style.display='none';
+  }
+</script>
+<STYLE>
+*{
+  font-size:25px;
+}
+  div,p,h1,a,span{
+    border: 4px solid green;
+  }
+  
+  .main{
+    text-align:center;
+    font-size:40px;
+    background-color: beige;
+  }
+  a,span{
+    margin: 2px;
+  }
+
+</STYLE>
+</head>
+<body>
+ 
+<h1 class="main">Elementos BLOCK</h1>
+<div> <!--contenedor de imagen y texto-->
+  Un DIV es block por defecto
+</div>
+<p>Un "&lt;p&gt;" también</p>
+<p> Y "&lt;h1&gt;"...."&lt;form&gt;"  "&lt;header&gt;"   "&lt;footer&gt;"...</p>
+ 
+
+<h1 class="main">Elementos INLINE</h1>
+<span>Un "&lt;span&gt;",</span><a> un enlace &lt;a&gt;"</a><span> y una imagen "&lt;img&gt;" son INLINE</span>
+<h1 id="oculta" class="main">display: none; (para ocultar elementos)</h1>
+<button onclick="oculta()">Ocultame</button><button onclick="muestra()">Muestrame</button>
+<h1 class="main">Cambiar elemento block por defecto a inline (una lista p.ej.)</h1>
+<ul>
+  <li class="lista">Hola</li>
+  <li class="lista">super</li>
+  <li class="lista">amiguetes</li>
+</ul>
+<button onclick="liinline()">Cambia a inline</button><button onclick="liblock()">Vuelve a block</button>
+<h1 class="main">Cambiar elemento inline por defecto a block (enlaces p.ej.)</h1>
+<a id="blocklink" href="">Soy un enlace</a><span> Soy un SPAN</span>
+<button onclick="enlaceablock()">cambia el enlace a display:block</button>
+<h1 class="main">También podemos ocultar elementos con visibility:hidden;</h1>
+<img id="visi" src="sunset.jfif" width="200px"><button onclick="hidevisi()">Esconde con visibility:hidden;</button><br>
+<img id="dispnone" src="sunset.jfif" width="200px"><button onclick="disnone()">Esconde con display:none;</button>
+</body>
+</html>

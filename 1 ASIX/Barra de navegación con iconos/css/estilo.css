@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size:1.1em;
+    font-family: Verdana;
+    text-decoration:none;
+    color:black;
+}
+
+div{
+    text-align: center;
+    background-color: #02eeff;
+
+
+}
+
+a{
+    background-color: #02eeff;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin:-5px;
+    transition: all 0.5s;
+
+}
+
+a:hover{
+    background-color: rgb(0, 255, 128);
+
+}

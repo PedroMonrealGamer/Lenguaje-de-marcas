@@ -1,0 +1,74 @@
+
+
+body{
+    background-color: #e8cbb6;
+
+}
+
+*{
+    font-family: montserrat;
+}
+
+.logo{
+    border-radius: 50%;
+    scale: 50%;
+    border-style: solid;
+}
+main{
+    font-family: montserrat;
+    font-size: 15px ;
+
+}
+
+main h2.pregunta{
+    text-align: center;
+    margin: 20px;
+}
+
+main li{
+    margin-top: 20px;
+    text-align: center;
+    list-style:inside;
+
+}
+main button{
+    background-color:#a1c5a569;
+    color:#000000;
+    font-size: 40px;
+    font-family: rhyme;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    display: block;
+    margin:40px auto 0px auto
+
+}
+
+form{
+    margin-top: 30px;
+    font-size: 20px;
+    justify-content: left;
+    text-align: left;
+
+}
+
+.principal{
+    background-color: #e8cbb6;
+        border-style: solid;
+        padding: 20px;
+
+}
+.preguntas{
+    border-style: solid;
+    background-color: #a1c5a569;
+
+}
+
+
+.pregunta1{
+    border-style: solid;
+}
+@media screen and (min-width:600px) {
+
+
+    }

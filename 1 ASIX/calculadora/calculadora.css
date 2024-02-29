@@ -1,0 +1,47 @@
+*{
+    font-family: 'helvetica';
+    color:white;
+}
+body{
+    background-color: rgb(124, 158, 0);
+    
+}
+h1{
+    font-size: 4vw;
+    text-align: center;
+}
+
+h2{
+    font-size: 3vw;
+    text-align: center;
+}
+
+div{
+    margin-left: auto;
+    margin-right: auto;
+
+    width:70%;
+    border: 2px solid white;
+    padding:15px;
+}
+
+div.solucion{
+    font-size: 2vw;
+    width:70%;
+    margin:auto;
+    border: 15px double white;
+    padding:15px;
+    text-align: center;
+}
+
+label{
+    width:300px;
+}
+button{
+    color:black;
+    width: 150px;
+    
+}
+input{
+    color:rgb(255, 0, 0);
+}

@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+}
+
+h1{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items:center;
+    border: 3px solid black;
+    border-radius: 7px;
+    background-color: rgb(0,255,149);
+}
+
+.contenedor{
+    display:flex; /* ESTO SIEMPRE PARA USAR FLEXBOX */
+    background-color: rgb(108,206,157);
+    align-items: stretch;
+}
+
+.contenedor > div {/*El símbolo > quiere decir los divs que haya dentro de la clase contenedor*/
+    background-color: #2b5736;
+    margin:10px;
+    text-align: center;
+    line-height: 75px;
+    /*width: 200px;*/ /*Sólo ponedlo para el shrink*/
+    font-size 30px;
+    color:white;
+    border:2px solid white;
+    border-radius: 4px;
+    }
+
+div.botonera{
+    display:flex;
+    justify-content: center;
+    background-color: rgb(0,255,149);
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.boton{
+    background-color: #7ac58d;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 20px;
+    color:black;
+    border: 2px solid black;
+    border-radius: 4px;
+}

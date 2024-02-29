@@ -1,0 +1,17 @@
+
+
+
+.div1{
+
+
+    columns: 2;
+}
+.divnuevo{
+    display: inline-block;
+    border-style: solid;
+    margin: 20px;
+    padding:20px;
+    width:auto;
+    align-items: center;
+    justify-content:center;
+}

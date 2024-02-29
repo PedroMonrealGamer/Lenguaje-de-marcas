@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    text-align: center;
+}
+.caja{
+    border-style: solid;
+    padding:20px;
+    margin:20px;
+}
+.cosas{
+align-content: center;
+border-style: solid;
+}
+button{
+    border-width: 3px;
+    background-color: rgb(29, 255, 255);
+    padding: 15px 10px;
+    font-size: 20px;
+    margin: 4px 2px;
+}
+
+.mensaje{
+    background-color: rgb(205, 252, 184);
+    border-style: solid;
+    border-color: red;
+    padding: 2%;
+    font-size: 20px;
+}

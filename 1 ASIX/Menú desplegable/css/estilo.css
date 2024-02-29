@@ -1,0 +1,59 @@
+ul {
+    list-style-type:none; /* Elimina los puntos de la lista */
+    text-decoration: none; /* Elimina subrayado de enlaces */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(224, 224, 224);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+li{
+    float:left; /* Para mantener la barra de forma horizontal */
+}
+
+li a, .dropgo{
+    display: inline-block;
+    color:rgb(0, 0, 0);
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover , .dropdown:hover .dropgo{/* Cambio de color al pasar por encima (hover) */
+    background-color: rgb(255, 252, 82);
+}
+
+li.dropdown{
+    display: inline-block;
+}
+
+.contenido{
+    display: none; /* Hace que no aparezca el desplegable de forma predeterminada */
+    position: absolute;
+    min-width: 160px;
+    z-index: 1; /* Ajusta el orden de capas */
+}
+
+.contenido a{
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+
+.contenido a:hover {background-color: rgb(238, 189, 98);}
+
+.dropdown:hover .contenido{
+    display: block; /* Permite que se vea */
+}
+
+#Desplegable1{
+    background-color: rgb(146, 146, 250);
+
+}
+
+#Desplegable2{
+    background-color: rgb(109, 248, 195);
+
+}

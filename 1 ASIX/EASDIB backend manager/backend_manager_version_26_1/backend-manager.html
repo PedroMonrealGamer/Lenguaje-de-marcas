@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="backend-manager.css" rel="stylesheet">
+    <title>joyas-Backend</title>
+    <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.6.0/stitch.js"></script>
+    <script src="Azure-Storage-Scripts/azure-storage.file.js"></script>
+    <script>
+        // Azure storage account
+        var account = "grupo3";
+        var fileShare = "grupo3";
+        var sas = "?sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2024-04-19T21:18:37Z&st=2023-12-19T14:18:37Z&spr=https&sig=lai4oiZo7CJIYe8VSARktIFIfgPZ7pGBpMlGHnGSlPg%3D";
+
+        var currentPath = '';
+        var fileUri = '';
+        var currentPath = [];
+
+        function checkParameters() {
+
+            if (account == null || account.length < 1) {
+                alert('Please enter a valid storage account name!');
+                return false;
+            }
+            if (sas == null || sas.length < 1) {
+                alert('Please enter a valid SAS Token!');
+                return false;
+            }
+
+            return true;
+        }
+
+        function getFileService() {
+            if (!checkParameters())
+                return null;
+
+            fileUri = 'https://' + account + '.file.core.windows.net';
+            var fileService = AzureStorage.File.createFileServiceWithSas(fileUri, sas).withFilter(new AzureStorage.File.ExponentialRetryPolicyFilter());
+            return fileService;
+        }
+
+        function viewFileShare(selectedFileShare) {
+            fileShare = selectedFileShare;
+            alert('Selected ' + fileShare + ' !');
+            currentPath = [];
+            refreshDirectoryFileList();
+        }
+
+        function refreshDirectoryFileList(directory) {
+            var fileService = getFileService();
+            if (!fileService)
+                return;
+
+            if (fileShare.length < 1) {
+                alert('Please select one file share!');
+                return;
+            }
+
+            if (typeof directory === 'undefined')
+                var directory = '';
+            if (directory.length > 0)
+                currentPath.push(directory);
+            directory = currentPath.join('\\\\');
+
+        }
+
+        function createFileFromStream(checkMD5) {
+            var files = document.getElementById('files').files;
+            if (!files.length || files.length >= 2) {
+                alert('Selecciona solo una imagen');
+                return;
+            }
+            var success = 0;
+
+            for (j = 0; j < files.length; j++) {
+                var file = files[j];
+
+                var fileService = getFileService();
+                if (!fileService)
+                    return;
+
+                var btn = document.getElementById("upload-button");
+                btn.disabled = true;
+                btn.innerHTML = "Uploading";
+                var finishedOrError = false;
+                var options = {
+                    contentSettings: {
+                        contentType: file.type
+                    },
+                    storeFileContentMD5: checkMD5
+                };
+
+                var speedSummary = fileService.createFileFromBrowserFile(fileShare, currentPath.join('\\\\'), file.name, file, options, function (error, result, response) {
+                    finishedOrError = true;
+                    btn.disabled = false;
+                    btn.innerHTML = "Upload";
+                    if (error) {
+                        alert("Upload failed, open browser console for more detailed info.");
+                        console.log(error);
+                    } else {
+                        setTimeout(function () { // Prevent alert from stopping UI progress update
+                            alert('Upload successfully!');
+                        }, 1000);
+                        success++;
+                        if (success == files.length) {
+                            // Insert document in a collection of MongoDB data base
+                            postcharacters(
+                                document.getElementById('color').value,
+                                document.getElementById('precio').value,
+                                document.getElementById('tipo').value,
+                                document.getElementById('descripcion').value,
+                                document.getElementById('estado').value,
+                                document.getElementById('files').files)
+                            displayCharacters("joyas")
+                        }
+                        // Refresh directory file list
+                        refreshDirectoryFileList();
+                    }
+                });
+            }
+        }
+
+    </script>
+    <script>
+        const client = stitch.Stitch.initializeDefaultAppClient("samplesjomusic4-ksakj");
+        const mongodb = client.getServiceClient(stitch.RemoteMongoClient.factory,"mongodb-atlas");
+        const db = mongodb.db("GRUPO-3");
+        function displayCharacters(div) {
+            setTimeout(() => {
+                db.collection("joyas")
+                .find({})
+                .toArray()
+                .then(docs => {
+                    var html = "";
+                    for (j = 0; j < docs.length; j++) {
+                        var result = ""
+                        for (i = 0; i < docs[j].images.length; i++) {
+                            result = result + '<div class="joya"><img src="https://' + account + '.file.core.windows.net/' + fileShare + '/' + docs[j].images[i].name + sas + '&xyz=' + new Date().getTime().toString() + '" />'
+                        }
+                        result = result + `<p>${docs[j].tipo} - ${docs[j].color} - ${docs[j].precio} - ${docs[j].descripcion}</p></div>`;
+                        html = html + result;
+                    }
+                    document.getElementById(div).innerHTML = html;
+                });
+            }, "500")
+        }
+
+        function deleteCharacter(id){
+            db.collection("joyas")
+                .deleteOne({ "_id": new stitch.BSON.ObjectId(id) })
+                .then(displayCharacters("joyas"))
+        }
+
+        function postcharacters(NewColor,NewPrecio,NewTipo,NewDescripcion,NewEstado,NewImages){
+            NewPrecio = Number(NewPrecio)
+            NewEstado = Boolean(NewEstado)
+            db.collection("joyas").insertOne({
+                    color: NewColor,
+                    precio: NewPrecio,
+                    tipo: NewTipo,
+                    descripcion: NewDescripcion,
+                    estado: NewEstado,
+                    images: NewImages
+            })
+            displayCharacters("joyas")
+        }
+        function displayCharactersOnLoad(div) {
+            client.auth
+                .loginWithCredential(new stitch.AnonymousCredential())
+                .then(displayCharacters(div))
+                .catch(console.error);
+        }
+    </script>
+</head>
+<body onload="displayCharactersOnLoad('joyas')">
+    <h1 id="titulo">Backend Manager</h1>
+    <div id="inputs">
+        <h3>Color</h3><input type="text" id="color">
+        <h3>Precio</h3><input type="text" id="precio">
+        <h3>Tipo</h3><input type="text" id="tipo">
+        <h3>Descripcion</h3><input type="text" id="descripcion"><br><br>
+        <label>Buen estado</label><input type="checkbox" id="estado"><br><br>
+        <label for="files" class="boton"><br>Imagen</label><br><br><input type="file" class="choosefile" multiple id="files" name="file"/><br><br>
+        <button id="upload-button" class="boton" onclick="createFileFromStream(false)">POST</button>
+    </div>
+    <br><br>
+    <div id="joyas"></div>
+</body>
+</html>

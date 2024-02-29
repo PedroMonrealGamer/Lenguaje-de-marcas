@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    background-color: #E8CBB6;
+    width: 100%;
+  }
+*{
+    font-family:"Montserrat";
+}
+
+main{
+    font-size: 15px ;
+
+}
+
+main h2.pregunta{
+    text-align: center;
+    margin: 20px;
+}
+
+main li{
+    margin-top: 20px;
+    text-align: center;
+    list-style:inside;
+
+}
+main button{
+    background-color:#a1c5a569;
+    color:#000000;
+    font-size: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    display: inline;
+    margin:40px auto 0px auto;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+form{
+    margin-top: 30px;
+    font-size: 20px;
+    justify-content: left;
+    text-align: left;
+    margin-bottom: 30px;
+
+}
+
+button,input{
+    cursor: pointer;
+}
+
+
+
+.botones{
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: #688762;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-left {
+    flex: 1;
+}
+  
+  .navbar-right {
+    display: flex;
+  }
+  
+  .navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  
+  .navbar-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+.principal{
+    background-color: #e8cbb6;
+        border-style: solid;
+        padding: 20px;
+
+}
+.preguntas{
+    border-style: solid;
+    background-color: #a1c5a569;
+    margin-top: 15vw;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 650px;
+
+}
+
+
+.titulo{
+    text-align: center;
+    margin-top: 16vw;    
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+
+#textopregunta{
+    color:blue;
+    text-align: center;
+}
+
+#formulario{
+    margin-right: 20px;
+    align-items: center;
+}
+
+.botonesabajo{
+    font-size: 50px;
+    transition: 0.2s;
+}
+
+.botonesabajo:hover{
+    font-size: 45px;
+    background-color: #47c05569;
+}
+
+.preguntaoculta{
+    display: none;
+}
+
+.ocultarboton{
+    display: none;
+}
+
+.ocultarbotonfinalizar{
+    display: none;
+}

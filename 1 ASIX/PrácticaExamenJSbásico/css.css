@@ -1,0 +1,21 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+button{
+    height: 20px;
+    width: 40px;
+}
+
+.datos{
+    color:blue;
+    font-size: 10px;
+}
+
+@media (max-width: 600px) {
+    * {
+        flex-direction: column;
+    }
+}

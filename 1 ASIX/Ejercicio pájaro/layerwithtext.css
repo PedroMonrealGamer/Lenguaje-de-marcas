@@ -1,0 +1,38 @@
+.imagenpájaro
+{
+width: 300px;
+}
+.divtexto
+{
+position: relative;
+bottom:54px;
+width:80px;
+height: 40px;
+border: 5px solid rgb(96, 167, 96);
+background-color:rgb(96, 167, 96);
+padding:0px;
+margin: 0px;
+visibility: hidden;
+opacity: 0;
+transition: opacity 1s;
+
+}
+
+.div1:hover .divtexto
+{
+opacity: 1;
+visibility: visible;
+background-color::rgb(96, 167, 96);
+}
+
+.texto
+{
+font-size: 15px;
+text-align: center;
+margin:5px;rgb(12, 255, 12)
+}
+.div1
+{
+    height: 0;  /* Con esto se hace que el div ocupe solo el espacio de lo que hay dentro */
+    width: 0;
+}

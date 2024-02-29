@@ -1,0 +1,48 @@
+
+.recuadromenu {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    border-style: solid;
+    border-color:hsl(12, 78%, 34%);
+    background-color: rgb(204, 193, 98);
+    width: 100%;
+    hight: 20%; 
+    text-align: center;
+
+  }
+
+.menutext {
+  text-decoration:none;
+  display: inline;
+  font-family: Helvetica;
+  padding: 15px;
+  font-size: 15px;
+  
+}
+
+.enlacemenu{/* Ajustes enlaces menú */
+    text-decoration:none; /* Quita la linia de los enlaces */
+    color:rgb(0, 0, 0);
+
+}
+
+.cabecera{
+  color:rgb(27, 33, 199);
+  background-color: rgba(38, 0, 255, 0.123);
+  font-family: Verdana;
+  font-size:240%;
+  border-style: outset;
+  border-width: 10px;
+  border-radius: 15px;
+  border-color:hsla(12, 76%, 48%, 0.651);
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+video{
+  margin-left: 50vw;
+  transform: translate(-50%);
+}

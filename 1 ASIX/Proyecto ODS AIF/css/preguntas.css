@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('/extra/Montserrat.ttf');
+  }
+  
+  @font-face {
+    font-family: 'rhyme';
+    src: url('/extra/rhyme.otf');
+  }
+
+
+body{
+    background-color: #A1C5A6;
+
+}
+
+*{
+    font-family: montserrat;
+}
+
+header{
+    text-align: center;
+}
+
+header img.logo_principal{
+    display: none;
+}
+header img.logo_secundario{
+    display:inline;
+}
+
+main{
+    font-family: montserrat;
+    font-size: 15px ;
+
+}
+
+main h2.pregunta{
+    text-align: center;
+    margin: 20px;
+}
+
+main li{
+    margin-top: 20px;
+    text-align: center;
+    list-style:inside;
+
+}
+main button{
+    background-color:#688762;
+    color:#e8cbb6;
+    font-size: 40px;
+    font-family: rhyme;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    display: block;
+    margin:40px auto 0px auto
+
+}
+
+form{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+@media screen and (min-width:600px) {
+
+    header img.logo_principal{
+        display: inline;
+    }
+    header img.logo_secundario{
+        display: none;
+    }
+    }

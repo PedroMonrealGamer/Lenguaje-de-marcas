@@ -1,0 +1,46 @@
+.div{
+    height: 0%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position:fixed;
+    overflow: hidden;
+    transition: height 0.8s;
+    background-color: rgb(32, 255, 125);
+}
+
+#abrir{
+    font-size: 10vh;
+    top:1;
+    right:0;
+    text-decoration: none;
+    color:black;
+}
+#cerrar{
+    font-size: 10vh;
+    bottom:0;
+    right:0;
+    text-decoration: none;
+    color:black;
+    display: flex;
+    margin-left: 90%;
+    margin-top:50vh;
+    /* position: fixed; */
+}
+
+li{
+padding-top: 20px;
+position: relative;
+margin-left: 50%;
+margin-right: 50%;
+font-family: verdana;
+font-size:2em;
+list-style: none;
+color:rgb(255, 255, 255);
+transition:0.5s;
+}
+
+li:hover{
+    color:rgb(255, 0, 0)
+
+}

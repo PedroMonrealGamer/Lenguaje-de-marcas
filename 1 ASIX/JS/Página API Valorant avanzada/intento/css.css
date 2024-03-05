@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    color:white;
+    background-image: url('fondo.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+.divelemento{
+    border-style: solid;
+    margin: 20px;
+    height: 320px;
+    width: 250px;
+    overflow: hidden;
+    align-items: center;
+    box-shadow: 0 0 15px red;
+    background-color: rgb(41, 41, 41);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+.divelemento h1{    text-align: center;
+    font-family: Calibri;
+    text-shadow: 0 5px 5px rgb(0, 0, 0);
+    
+
+}
+
+.armas{
+    background-size:contain;
+}

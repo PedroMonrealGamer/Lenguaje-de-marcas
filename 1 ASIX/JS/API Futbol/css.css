@@ -1,0 +1,13 @@
+.aa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.Centrar{
+    width: 200px; /* ajusta el ancho según tus necesidades */
+    height: 200px; /* ajusta la altura según tus necesidades */
+    background-color: #ccc;
+}

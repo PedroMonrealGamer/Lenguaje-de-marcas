@@ -1,13 +1,169 @@
-.aa{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+body{
+    background-color: rgb(37, 37, 37);
 }
 
-.Centrar{
-    width: 200px; /* ajusta el ancho según tus necesidades */
-    height: 200px; /* ajusta la altura según tus necesidades */
-    background-color: #ccc;
+*{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
+
+
+
+button.fa-bars{
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    color:rgb(255, 255, 255);
+    font-size: 40px;
+    padding: 20px;
+    float: left;
+    
+    
+}
+button.fa-xmark{
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    color:rgb(255, 255, 255);
+    font-size: 40px;
+    padding: 20px;
+    float: left;
+}
+
+button.fa-xmark{
+    
+}
+
+#menu{
+    position:absolute;
+    background-color: rgb(255, 103, 103);
+    height: 500%;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Geneva;
+    transition: 2s ease-in;
+
+}
+
+.menuOculto{
+    display: none;
+}
+ul {
+    list-style-type: none;
+    margin-top: 100px;
+}
+
+ul button{
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    padding-bottom: 25px;
+}
+.div1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+    color:white;
+
+
+}
+
+
+.divEquipos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+    color:white;
+    margin-bottom: 50px;
+}
+
+.equiposOculto{
+    display: none;
+}
+
+
+.divIndividualEquipos{
+    border: 1px solid #ccc;
+    margin: 20px;
+    text-align: center;
+    width: 500px;
+    height: 450px;
+    background-color: black;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    scale: 0.9;
+}
+
+.DivEscudo{
+    margin: 5px;
+    display: grid;
+    place-items: center;
+
+}
+
+.DivEscudo img{
+    width: 140px;
+
+}
+
+.DivEstadio{
+    overflow: hidden;
+
+}
+
+.DivEstadio img{
+    margin-bottom: 0;
+    width: 510px;
+}
+
+
+.divJugadores{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+    color:white;
+    margin-bottom: 100px;
+    
+}
+.divJugadoresOculto{
+}
+
+.divindividualJugadores{
+    border: 1px solid #ccc;
+    margin: 20px;
+    text-align: center;
+    width: 260px;
+    background-color: black;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+
+}
+.DivJugador1 {
+    margin: 5px;
+    text-align: center;
+    width: 260px;
+    height: 600px;
+    max-height: 600px;
+}
+
+.divFotoJugador{
+    overflow: hidden;
+    height: 220px;
+}
+.DivJugador1 img{
+    width: 230px;
+
+
+}
+
+.jugadoresOculto{
+    display: none;
+}
+
+

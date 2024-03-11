@@ -24,6 +24,8 @@ function agentes(data) {
                 divpersonajecambio(this.id);
             });
 
+
+            
             var divpersonajeprincipal = document.createElement("div");
             divpersonajeprincipal.classList.add("divpersonajeprincipal");
 

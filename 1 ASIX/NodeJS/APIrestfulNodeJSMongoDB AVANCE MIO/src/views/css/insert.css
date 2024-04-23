@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: "M PLUS Code Latin", monospace;
+}
+
+.navbar{
+    background-color: #f5433c;
+    padding: 10px; 
+    height: 40px;
+}
+
+.navbar a{
+    font-size: 30px;
+    color:#E67625;
+    transition: color 0.3s;  
+}
+
+
+.navbar img{
+    transition: scale 0.4s;
+    float: left;
+    margin-right: 15px;
+    height: 40px;
+    filter: invert();
+}
+
+.navbar  img:hover{
+    scale: 1.1;
+}
+.navbar a:hover{
+
+    color:#FBD04B;
+
+}
+
+.main{
+    text-align: center;
+}
+
+.insert{
+    justify-content: center;
+    display: flex;
+    margin: 40px;
+}
+
+form{
+    background: linear-gradient(#f5433c, #ca5e5a);
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+
+}
+
+form label{
+
+    float: left;
+    font-size: 25px;
+    margin-bottom: 16px;
+
+
+}
+form input{
+    float: right;
+    margin-bottom: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    border-style: solid;
+    transition: all 0.2s;
+
+}
+
+form input:hover{
+    background-color: rgba(255, 0, 0, 0.096);
+}
+
+
+form select{
+    font-size: 25px;
+    border-radius: 10px;
+    border-style: solid;
+    transition: all 0.2s;
+}
+
+
+form select:hover{
+    background-color: rgba(255, 0, 0, 0.096);
+}
+
+
+
+#datos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.equipoExistente{
+    width: 300px;
+    height: 450px;
+    border-style: solid;
+    margin: 15px;
+    text-align: center;
+    font-size: 13px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    }
+
+
+
+.datosEquipo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.767);
+    overflow: hidden;
+}
+
+.fotoEstadio{
+    width: 300px;
+    height: 250px;
+}

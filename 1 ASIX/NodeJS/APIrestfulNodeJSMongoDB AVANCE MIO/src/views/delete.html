@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend</title>
+    <link rel="stylesheet" href="css/delete.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100..700&family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <div class="main">
+
+<div class="navbar">
+
+    <img src="pic/logoLIGA.png" onclick="window.location.href='/Backend';">
+</div>
+
+<div class="insert">
+    <div class="insert">
+        <form action="/api/equiposDELETE" method="POST"> 
+    
+            <h1>Delete</h1>
+            <label for="id">ID equipo:</label>
+            <input type="text" name="id" id="inputID">
+            <br><br><br>
+            <label for="confirmar">confirmar:</label>
+            <input type="text" name="confirmar" id="confirmar" placeholder="escribe CONFIRMAR">
+            <br><br><br>
+            <input type="submit" class="insertar" value="Eliminar">
+        </form>
+    </div>
+    
+    </div>
+</body>
+<div id="datos"></div>
+<script src="js/delete.js"></script>
+
+</html>

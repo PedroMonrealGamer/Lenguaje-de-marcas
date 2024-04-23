@@ -1,0 +1,17 @@
+idEquipo:1
+nombreEquipo:"FC Barcelona"
+nombreEstadio:"Camp Nou"
+capacidadEstadio:"99.354"
+fotoEscudo:"https://image-service.onefootball.com/transform?w=128&dpr=2&image=https://images.onefootball.com/icons/teams/164/5.png"
+fotoEstadio:"https://www.mundodeportivo.com/files/image_948_465/uploads/2024/03/05/65e74eab7dfb7.jpeg"
+
+
+
+{
+  "idEquipo": "1",
+  "nombreEquipo": "FC Barcelona",
+  "nombreEstadio": "Camp Nou",
+  "capacidadEstadio": "99,354",
+  "fotoEscudo": "https://image-service.onefootball.com/transform?w=128&dpr=2&image=https://images.onefootball.com/icons/teams/164/5.png",
+  "fotoEstadio": "https://www.mundodeportivo.com/files/image_948_465/uploads/2024/03/05/65e74eab7dfb7.jpeg"
+}

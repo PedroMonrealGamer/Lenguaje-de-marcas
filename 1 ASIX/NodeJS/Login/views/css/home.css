@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: "M PLUS Code Latin", monospace;
+}
+
+.navbar{
+    background-color: #98A272;
+    padding: 10px; 
+}
+
+.navbar a{
+    font-size: 30px;
+    color:#E67625;
+    transition: color 0.3s;  
+}
+
+
+.navbar  img{
+    transition: scale 0.4s;
+    float: left;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.navbar  img:hover{
+    scale: 1.1;
+}
+.navbar a:hover{
+
+    color:#FBD04B;
+
+}
+
+.main{
+    display: flex;
+    text-align: center;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.main a{
+    transition: all 0.7s;
+
+    font-size: 50px;
+    padding: 20px;
+    margin:10px;
+    border-style: solid;
+    border-color: black;
+    color:#E67625;
+    background-color: #98A272;
+    border-radius: 10px;
+
+}
+
+.main a:hover{
+
+    color:#FBD04B;
+    box-shadow: inset 400px 0 0 0 #000000;
+    border-color: white;
+    cursor: pointer;
+
+
+}

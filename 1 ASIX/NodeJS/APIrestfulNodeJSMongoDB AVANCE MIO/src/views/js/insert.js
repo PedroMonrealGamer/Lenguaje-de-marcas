@@ -1,0 +1,48 @@
+// Hacer el GET request desde el cliente
+fetch('http://localhost:9000/api/equipos')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+    mostrar(data);
+  })
+  .catch(error => {
+    console.error('Error al hacer el GET request:', error);
+  });
+
+
+  function mostrar(data) {
+
+    var datos = document.getElementById("datos");
+
+    for(i = 0; i < data.length; i++){
+  var equipo = document.createElement("div");
+  var dat = document.createElement("div");
+  equipo.classList.add("equipoExistente");
+  dat.classList.add("datosEquipo");
+  var imageUrl = data[i].fotoEscudo;
+  equipo.style.backgroundImage = "url('" + imageUrl + "')";
+  
+  var nombreEquipo = document.createElement("h1");
+    nombreEquipo.textContent = "Nombre equipo: " + data[i].nombreEquipo;
+  var nombreEstadio = document.createElement("h1");
+  nombreEstadio.textContent = "Nombre estadio: " + data[i].nombreEstadio;
+  var capacidadEstadio = document.createElement("h1");
+  capacidadEstadio.textContent = "Capacidad estadio: " + data[i].capacidadEstadio;
+  var fotoEstadio = document.createElement("img");
+  fotoEstadio.src = data[i].fotoEstadio;
+  fotoEstadio.classList.add("fotoEstadio");
+
+  datos.appendChild(equipo);
+  equipo.appendChild(dat);
+  dat.appendChild(nombreEquipo);
+  dat.appendChild(nombreEstadio);
+  dat.appendChild(capacidadEstadio);
+  dat.appendChild(fotoEstadio);
+
+    }
+}
